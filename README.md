@@ -24,45 +24,21 @@ Le dataset utilisé est MovieLens ml-latest-small (~100 000 évaluations).
 
 LightGCN améliore la baseline de **+42% sur le NDCG@10**.
 
+Voir `results/metrics.csv` pour le tableau complet et `figures/` pour la
+courbe d'apprentissage et la visualisation t-SNE des embeddings.
+
+## Démo interactive
+
+Une démo Gradio permet de sélectionner 1 à 3 films aimés et d'obtenir des
+recommandations basées sur la similarité des embeddings appris par LightGCN.
+
+🔗 **Démo en ligne** : [À COMPLÉTER - lien Hugging Face Spaces]
+
+Code source : dossier `demo/`
+
+## Rapport technique
+
+Le rapport complet (architecture, protocole d'évaluation, résultats, analyse)
+est disponible ici : [`rapport_lightgcn.pdf`](rapport_lightgcn.pdf)
+
 ## Structure du projet
-lightgcn-recommender/
-
-├── LightGCN_MovieLens.ipynb   # Notebook principal
-
-├── requirements.txt            # Dépendances
-
-└── README.md
-## Installation et utilisation
-
-### Option 1 — Google Colab (recommandé)
-Ouvrir directement le notebook dans Google Colab :
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com)
-
-### Option 2 — Local
-```bash
-pip install torch pandas numpy scipy matplotlib seaborn scikit-learn
-jupyter notebook LightGCN_MovieLens.ipynb
-```
-
-## Points théoriques clés
-
-- **Graphe biparti** : représentation des interactions utilisateur-film
-- **LightGCN vs GCN classique** : suppression des matrices de transformation W et des biais
-- **Perte BPR** : optimisation par paires positives/négatives
-- **Agrégation multicouche** : moyenne des embeddings de chaque couche
-- **Métriques de ranking** : Recall et NDCG
-
-## Dataset
-
-MovieLens ml-latest-small :
-- 100 836 évaluations
-- 610 utilisateurs
-- 9 724 films
-
-Téléchargement automatique dans le notebook.
-
-## Environnement
-
-- Python 3.10+
-- PyTorch 2.x
-- GPU T4 (Google Colab)
