@@ -1,0 +1,5 @@
+Modele,K,Recall@K,NDCG@K
+LightGCN,10,0.0268,0.0229
+LightGCN,20,0.0538,0.0349
+Popularite,10,0.0189,0.0126
+Popularite,20,0.0427,0.0221
