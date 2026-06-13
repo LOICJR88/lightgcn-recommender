@@ -29,12 +29,14 @@ courbe d'apprentissage et la visualisation t-SNE des embeddings.
 
 ## Démo interactive
 
-Une démo Gradio permet de sélectionner 1 à 3 films aimés et d'obtenir des
-recommandations basées sur la similarité des embeddings appris par LightGCN.
+Une démo Gradio est intégrée à la fin du notebook : elle permet de
+sélectionner 1 à 3 films aimés et d'obtenir des recommandations basées sur la
+similarité des embeddings appris par LightGCN.
 
-🔗 **Démo en ligne** : [À COMPLÉTER - lien Hugging Face Spaces]
+En exécutant la dernière cellule du notebook (`demo.launch(share=True)`), un
+lien public temporaire est généré automatiquement pour ouvrir l'interface.
 
-Code source : dossier `demo/`
+Code source de l'application : dossier `demo/`
 
 ## Structure du projet
 lightgcn-recommender/
