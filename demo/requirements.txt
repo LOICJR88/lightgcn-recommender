@@ -1,8 +1,3 @@
-torch>=2.0
+torch
 pandas
-numpy
-scipy
-matplotlib
-seaborn
-scikit-learn
-jupyter
+gradio
