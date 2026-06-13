@@ -42,3 +42,74 @@ Le rapport complet (architecture, protocole d'évaluation, résultats, analyse)
 est disponible ici : [`rapport_lightgcn.pdf`](rapport_lightgcn.pdf)
 
 ## Structure du projet
+lightgcn-recommender/
+
+├── LightGCN_MovieLens.ipynb     # Notebook principal (code source)
+
+├── best_model.pt                # Modèle entraîné (poids)
+
+├── embeddings.pt                # Embeddings exportés (pour la démo)
+
+├── figures/
+
+│   ├── loss_curve.png
+
+│   └── tsne_embeddings.png
+
+├── results/
+
+│   └── metrics.csv
+
+├── demo/
+
+│   ├── app.py
+
+│   ├── movies.csv
+
+│   └── requirements.txt
+
+├── rapport_lightgcn.pdf
+
+├── requirements.txt
+
+└── README.md
+## Installation et utilisation
+
+### Option 1 — Google Colab (recommandé)
+Ouvrir directement le notebook dans Google Colab.
+
+### Option 2 — Local
+```bash
+pip install -r requirements.txt
+jupyter notebook LightGCN_MovieLens.ipynb
+```
+
+### Lancer la démo localement
+```bash
+cd demo
+pip install -r requirements.txt
+python app.py
+```
+
+## Points théoriques clés
+
+- **Graphe biparti** : représentation des interactions utilisateur-film
+- **LightGCN vs GCN classique** : suppression des matrices de transformation W et des biais
+- **Perte BPR** : optimisation par paires positives/négatives
+- **Agrégation multicouche** : moyenne des embeddings de chaque couche
+- **Métriques de ranking** : Recall et NDCG
+
+## Dataset
+
+MovieLens ml-latest-small :
+- 100 836 évaluations
+- 610 utilisateurs
+- 9 724 films
+
+Téléchargement automatique dans le notebook.
+
+## Environnement
+
+- Python 3.10+
+- PyTorch 2.x
+- GPU T4 (Google Colab)
