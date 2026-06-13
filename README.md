@@ -36,11 +36,6 @@ recommandations basées sur la similarité des embeddings appris par LightGCN.
 
 Code source : dossier `demo/`
 
-## Rapport technique
-
-Le rapport complet (architecture, protocole d'évaluation, résultats, analyse)
-est disponible ici : [`rapport_lightgcn.pdf`](rapport_lightgcn.pdf)
-
 ## Structure du projet
 lightgcn-recommender/
 
@@ -67,8 +62,6 @@ lightgcn-recommender/
 │   ├── movies.csv
 
 │   └── requirements.txt
-
-├── rapport_lightgcn.pdf
 
 ├── requirements.txt
 
